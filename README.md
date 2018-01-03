@@ -11,7 +11,6 @@ Setup includes:
 
 ## Installation & Setup
 1. git clone
-2. npm init
 3. npm i
 4. npm run dev-client
 
