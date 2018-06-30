@@ -2,7 +2,7 @@
 const config: {
   [string]: string
 } = {
-  API_ENDPOINT: process.env.REACT_APP_API_ENDPOINT || '',
+  API_ENDPOINT: 'https://my-json-server.typicode.com/flannerykj/react-starter/episodes',
 };
 
 export default config;

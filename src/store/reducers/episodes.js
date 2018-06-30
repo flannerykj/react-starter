@@ -1,5 +1,6 @@
 import type { Episode } from '../../models/episodes';
 import type { Action } from '../../models/actions';
+import initialStore from './initialStore';
 
 type EpisodesState = {
   data: Episode[],
@@ -7,15 +8,8 @@ type EpisodesState = {
   error: ?string,
 }
 
-const initialState: EpisodesState = {
-  data: [],
-  loading: false,
-  error: null
-};
 
-
-
-function episodesReducer(state: EpisodesState = initialState, action: Action): EpisodesState {
+function episodesReducer(state: EpisodesState = initialStore.episodes, action: Action): EpisodesState {
 	switch (action.type) {
 
   // handling asynchronous actions
@@ -28,10 +22,9 @@ function episodesReducer(state: EpisodesState = initialState, action: Action): E
   case 'GET_EPISODES_SUCCESS':
     return {
       ...state,
-      data: action.episodes
+      data: action.episodes,
       loading: false
     };
-
   case 'GET_EPISODES_FAILURE':
     return {
       ...state,

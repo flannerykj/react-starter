@@ -2,7 +2,35 @@
   "episodes": [
     {
       "id": 1,
-      "title": "first podcast"
+      "title": "first podcast",
+      "published_on": "today",
+      "last_updated": "today",
+      "description": "first episode",
+      "mp3_link": "www.google.com"
+    },
+    {
+      "id": 2,
+      "title": "second podcast",
+      "published_on": "today",
+      "last_updated": "today",
+      "description": "first episode",
+      "mp3_link": "www.google.com"
+    },
+    {
+      "id": 3,
+      "title": "third podcast",
+      "published_on": "today",
+      "last_updated": "today",
+      "description": "first episode",
+      "mp3_link": "www.google.com"
+    },
+    {
+      "id": 4,
+      "title": "fourth podcast",
+      "published_on": "today",
+      "last_updated": "today",
+      "description": "first episode",
+      "mp3_link": "www.google.com"
     }
   ]
 }
