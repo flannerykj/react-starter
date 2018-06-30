@@ -26,6 +26,9 @@ class EpisodeArchive extends Component<Props> {
     return (
       <div className='main'>
         <h1>Episode Archive</h1>
+        {this.props.episodes.data.map(
+          (episode) => <EpisodeListItem {...episode} />
+        )}
       </div>
     );
   }

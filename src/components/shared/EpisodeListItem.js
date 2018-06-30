@@ -2,10 +2,11 @@
 import React, { Component } from 'react';
 import type { Episode } from '../../models/episodes';
 
-const EpisodeListItem = (props: Episode) => {
+const EpisodeListItem = ({title, published_on, description}: Episode) => {
   return(
     <div>
-      <h1>an episode</h1>
+      <h4>{title}</h4>
+      <p>{description}</p>
     </div>
   )
 }
