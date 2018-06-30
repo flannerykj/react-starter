@@ -1,36 +1,10 @@
-import {combineReducers} from 'redux';
-import initialStore from "../initialStore";
+// @flow
+import { combineReducers } from 'redux';
 
-
-const postsReducer = (currentState, action) => {
-  switch(action.type){
-    case 'REQUEST_POSTS':
-      return Object.assign({}, currentState, {
-        items: [],
-        dataReceived: false
-      });
-    case 'RECEIVE_POSTS':
-      return Object.assign({}, currentState, {
-        items: ['my post'],
-        dataReceived: true
-      });
-    case 'ADD_POST':
-      return Object.assign({}, currentState, {
-        items: ["new post added"]
-      });
-    case 'CLEAR_POSTS':
-      return Object.assign({},currentState,{
-        items: []
-      });
-    default:
-      return currentState || initialStore.posts;
-	}
-};
-
+import episodesReducer from './episodes';
 
 const rootReducer = combineReducers({
-  posts: postsReducer
+  episodes: episodesReducer, // session info
 });
 
 export default rootReducer;
-
