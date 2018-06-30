@@ -6,14 +6,10 @@ import App from './app';
 
 import './sass/main.scss';
 
+
 ReactDOM.render(
   <Provider store={store}>
-    <div className='app-container'>
-      <div className='wrapper page-content'>
-        Page Content
-        <App/>
-      </div>
-    </div>
+    <App/>
   </Provider>
  , document.getElementById("root")
 )

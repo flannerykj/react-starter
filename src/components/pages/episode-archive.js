@@ -10,10 +10,17 @@ import type { EpisodesContainer } from '../../models/episodes';
 
 type Props = {
   episodes: EpisodesContainer,
-  history: History
+  history: History,
+  fetchEpisodes: () => void
 }
 
-export default class EpisodeArchive extends Component<Props> {
+class EpisodeArchive extends Component<Props> {
+
+  componentWillMount() {
+    if (this.props.episodes.needsUpdate) {
+      this.props.fetchEpisodes();
+    }
+  }
 
   render() {
     return (
@@ -23,9 +30,12 @@ export default class EpisodeArchive extends Component<Props> {
     );
   }
 }
-const mapStateToProps = (appState) => {
+
+const mapStateToProps = (appState) => ({
   episodes: appState.episodes
-}
+});
 const mapDispatchToProps = (dispatch) => ({
   fetchEpisodes: (() => dispatch(fetchEpisodes()))
 });
+
+export default connect(mapStateToProps, mapDispatchToProps)(EpisodeArchive);

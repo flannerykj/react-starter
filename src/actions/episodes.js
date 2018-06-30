@@ -1,7 +1,7 @@
 import type Episode from '../models/episode';
 import episodeService from '../services/episode-service';
 
-export function fetchPosts() {
+export function fetchEpisodes() {
   return (function(dispatch){
     dispatch ({type: 'GET_EPISODES_REQUEST'});
     episodeService.get()

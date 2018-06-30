@@ -10,5 +10,6 @@ export type Episode = {
 export type EpisodesContainer = {
   data: Episode[],
   loading: boolean,
-  error: string
+  error: string,
+  needsUpdate: boolean
 }

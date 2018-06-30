@@ -2,7 +2,8 @@ const initialStore = {
   episodes: {
     data: [],
     loading: false,
-    error: null
+    error: null,
+    needsUpdate: true
   }
 }
 

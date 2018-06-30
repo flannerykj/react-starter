@@ -8,7 +8,8 @@ class EpisodeService {
 
   get(ids: string = ''): Promise<Episode[]> {
     return apiService.get(`/episodes`)
-      .then((response) => response.episodes);
+      .then((response) => response)
+      .catch((error) => error);
   }
 }
 
