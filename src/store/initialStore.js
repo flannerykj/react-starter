@@ -1,5 +1,5 @@
 const initialStore = {
-  episodes: {
+  posts: {
     data: [],
     loading: false,
     error: null,

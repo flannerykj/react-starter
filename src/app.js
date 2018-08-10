@@ -5,7 +5,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import EpisodeArchive from './components/pages/episode-archive';
+import Home from './components/pages/home';
 import history from './history';
 
 export default class App extends Component<{}> {
@@ -15,7 +15,7 @@ export default class App extends Component<{}> {
       <Router history={history}>
         <div className='main'>
           <Switch>
-            <Route path='/' component={EpisodeArchive} />
+            <Route path='/' component={Home} />
           </Switch>
         </div>
       </Router>

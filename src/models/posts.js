@@ -1,4 +1,4 @@
-export type Episode = {
+export type Post = {
   id: number,
   title: string,
   published_on: string,
@@ -7,8 +7,8 @@ export type Episode = {
 }
 
 
-export type EpisodesContainer = {
-  data: Episode[],
+export type PostsContainer = {
+  data: Post[],
   loading: boolean,
   error: string,
   needsUpdate: boolean

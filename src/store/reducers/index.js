@@ -1,10 +1,10 @@
 // @flow
 import { combineReducers } from 'redux';
 
-import episodesReducer from './episodes';
+import postsReducer from './posts';
 
 const rootReducer = combineReducers({
-  episodes: episodesReducer, // session info
+  posts: postsReducer, // session info
 });
 
 export default rootReducer;
